@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Home</title>
+</head>
+<body>
+<div class="bg-secondary">
+<header>
+<div class="container-fluid bg-dark text-info text-center p-3">
+    <h1>PIERCED BY JASON</h1>
+</div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+    <ul class="navbar-nav nav-pills items-center">
+        <li class="nav-item">
+            <a class="nav-link text-primary" href="main.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-primary" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-primary" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-primary" href="contact.html">Contact Me</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link active text-white" href="gallery.html">Gallery</a>
+        </li>
+    </ul>
+</nav>
+</header>
+<div class="container">
+    <h1 class="text-center text-info my-4">Piercing Gallery</h1>
+    <section class="mb-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="text-info mb-0">Ear Piercings</h2>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-info carousel-btn" onClick="changeGalleryView('earGallery','carousel')" aria-label="Carousel view"><i class="bi bi-view-stacked"></i></button>
+                <button type="button" class="btn btn-outline-info grid-btn" onClick="changeGalleryView('earGallery', 'grid')" aria-label="Grid view"><i class="bi bi-grid-3x3-gap"></i></button>
+            </div>
+        </div>
+    <div id="earWrapper" class="gallery-wrapper position-relative">
+        <button type="button" class="gallery-arrow position-absolute top-50 start-0 translate-middle-y" 
+        onClick="scrollGallery('earGallery', -266)", aria-label="previous photos">
+        <span>&#10094</span>
+        </button>
+        <button type="button" class="gallery-arrow position-absolute top-50 end-0 translate-middle-y" 
+        onClick="scrollGallery('earGallery', 266)",
+         aria-label="next photos">
+            <span>&#10095</span>
+        </button>
+        <div id="earGallery" class="gallery-track d-flex gap-1 overflow-auto mt-3">
+            <img src="images/img4.jpg" alt="Ear Piercing by Jason" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal">
+            <img src="images/img5.jpg" alt="Ear Piercing by Jason" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal">
+            <img src="images/img6.jpg" alt="Ear Piercing by Jason" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal">
+             <img src="images/img4.jpg" alt="Ear Piercing by Jason" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal">
+            <img src="images/img5.jpg" alt="Ear Piercing by Jason" class="gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal">
+            <img src="images/img6.jpg" alt="Ear Piercing by Jason" class="gallery-img rounded"data-bs-toggle="modal" data-bs-target="#imageModal" >
+        </div>
+    </div>
+    </section>
+    <section class="mb-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="text-info mb-0">Facial & Oral Piercings</h2>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-info carousel-btn" onClick="changeGalleryView('faceGallery','carousel')" aria-label="Carousel view"><i class="bi bi-view-stacked"></i></button>
+                <button type="button" class="btn btn-outline-info grid-btn" onClick="changeGalleryView('faceGallery', 'grid')" aria-label="Grid view"><i class="bi bi-grid-3x3-gap"></i></button>
+            </div>
+        </div>
+    <div id="faceWrapper" class="gallery-wrapper position-relative">
+        <button type="button" class="gallery-arrow position-absolute top-50 start-0 translate-middle-y" 
+        onClick="scrollGallery('faceGallery', -266)", aria-label="previous photos">
+        <span>&#10094</span>
+        </button>
+        <button type="button" class="gallery-arrow position-absolute top-50 end-0 translate-middle-y" 
+        onClick="scrollGallery('faceGallery', 266)",
+         aria-label="next photos">
+            <span>&#10095</span>
+        </button>
+        <div id="faceGallery" class="gallery-track d-flex gap-1 overflow-auto mt-3">
+            <img src="images/img4.jpg" alt="Facial & Oral Piercing by Jason" class="gallery-img rounded">
+            <img src="images/img5.jpg" alt="Facial & Oral Piercing by Jason" class="gallery-img rounded">
+            <img src="images/img6.jpg" alt="Facial & Oral Piercing by Jason" class="gallery-img rounded">
+             <img src="images/img4.jpg" alt="Facial & Oral Piercing by Jason" class="gallery-img rounded">
+            <img src="images/img5.jpg" alt="Facial & Oral Piercing by Jason" class="gallery-img rounded">
+            <img src="images/img6.jpg" alt="Facial & Oral Piercing by Jason" class="gallery-img rounded">
+        </div>
+    </div>
+    </section>
+    <section class="mb-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="text-info mb-0">Body & Specialty Piercings</h2>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-info carousel-btn" onClick="changeGalleryView('bodyGallery','carousel')" aria-label="Carousel view"><i class="bi bi-view-stacked"></i></button>
+                <button type="button" class="btn btn-outline-info grid-btn" onClick="changeGalleryView('bodyGallery', 'grid')" aria-label="Grid view"><i class="bi bi-grid-3x3-gap"></i></button>
+            </div>
+        </div>
+    <div id="bodyWrapper" class="gallery-wrapper position-relative">
+        <button type="button" class="gallery-arrow position-absolute top-50 start-0 translate-middle-y" 
+        onClick="scrollGallery('bodyGallery', -266)", aria-label="previous photos">
+        <span>&#10094</span>
+        </button>
+        <button type="button" class="gallery-arrow position-absolute top-50 end-0 translate-middle-y" 
+        onClick="scrollGallery('bodyGallery', 266)",
+         aria-label="next photos">
+            <span>&#10095</span>
+        </button>
+        <div id="bodyGallery" class="gallery-track d-flex gap-1 overflow-auto mt-3">
+            <img src="images/img4.jpg" alt="Body Piercing by Jason" class="gallery-img rounded">
+            <img src="images/img5.jpg" alt="Body Piercing by Jason" class="gallery-img rounded">
+            <img src="images/img6.jpg" alt="Body Piercing by Jason" class="gallery-img rounded">
+             <img src="images/img4.jpg" alt="Body Piercing by Jason" class="gallery-img rounded">
+            <img src="images/img5.jpg" alt="Body Piercing by Jason" class="gallery-img rounded">
+            <img src="images/img6.jpg" alt="Body Piercing by Jason" class="gallery-img rounded">
+        </div>
+    </div>
+    </section>
+    <section class="mb-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="text-info mb-0">Jewelry Showcase</h2>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-info carousel-btn" onClick="changeGalleryView('showGallery','carousel')" aria-label="Carousel view"><i class="bi bi-view-stacked"></i></button>
+                <button type="button" class="btn btn-outline-info grid-btn" onClick="changeGalleryView('showGallery', 'grid')" aria-label="Grid view"><i class="bi bi-grid-3x3-gap"></i></button>
+            </div>
+        </div>
+    <div id="showWrapper" class="gallery-wrapper position-relative">
+        <button type="button" class="gallery-arrow position-absolute top-50 start-0 translate-middle-y" 
+        onClick="scrollGallery('showGallery', -266)", aria-label="previous photos">
+        <span>&#10094</span>
+        </button>
+        <button type="button" class="gallery-arrow position-absolute top-50 end-0 translate-middle-y" 
+        onClick="scrollGallery('showGallery', 266)",
+         aria-label="next photos">
+            <span>&#10095</span>
+        </button>
+        <div id="showGallery" class="gallery-track d-flex gap-1 overflow-auto mt-3">
+            <img src="images/img4.jpg" alt="Jewelry" class="gallery-img rounded">
+            <img src="images/img5.jpg" alt="Jewelry" class="gallery-img rounded">
+            <img src="images/img6.jpg" alt="Jewelry" class="gallery-img rounded">
+             <img src="images/img4.jpg" alt="Jewelry" class="gallery-img rounded">
+            <img src="images/img5.jpg" alt="Jewelry" class="gallery-img rounded">
+            <img src="images/img6.jpg" alt="Jewelry" class="gallery-img rounded">
+        </div>
+    </div>
+    </section>
+</div>
+<footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5 class="text-primary fw-bold mb-3 text-center">Quick Links</h5>
+                <ul class="list-unstyled text-center">
+                    <li class="mb-2"><a href="main.html" class="text-white text-decoration-none">Home</a></li>
+                    <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                    <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Contact Me</li>
+                    <li class="mb-2"><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="text-primary fw-bold mb-3 text-center">Follow Me</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-instagram"></i></li>
+                    <li class="mb-2"><i class="bi bi-facebook"></i></li>
+                    <li class="mb-2"><i class="bi bi-twitter"></i></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5 class="text-primary fw-bold mb-3 text-center">Get in Touch</h5>
+                <p class="text-center text-white mb-0">Need an appointment</p>
+                <p class="text-center text-white">or have questions?</p>
+                <a href="contact.html" class="btn btn-primary btn-sm d-inline-block">Contact Me</a>
+            </div>
+        </div>
+    </div>
+    <p>&copy; 2026 Piercing Studio. All rights reserved.</p>
+</footer>
+</div>
+<div class="modal fade" id="imageModal" tabindex="-1">
+    <div class="modal-dialog model-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="modalImage" class="img-fluid" alt="Enalrged piercing photo">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function scrollGallery(galleryId, distance) {
+        
+        const gallery = document.getElementById(galleryId);
+        
+        gallery.scrollBy({
+            left:distance,
+            behavoir: "smooth"
+        });
+    }
+    function changeGalleryView(galleryId, view) {
+        const gallery = document.getElementById(galleryId);
+        const wrapper = gallery.closest(".gallery-wrapper");
+        const section = gallery.closest("section")
+        const gridBtn = section.querySelector(".grid-btn");
+        const carouselBtn = section.querySelector(".carousel-btn")
+
+        if (view === "grid") {
+            gallery.classList.remove("d-flex");
+            gallery.classList.add("gallery-grid");
+            wrapper.classList.add("grid-mode");
+            gridBtn.classList.remove("btn-outline-info");
+            gridBtn.classList.add("btn-info");
+            carouselBtn.classList.remove("btn-info");
+            carouselBtn.classList.add("btn-outline-info")
+        }
+    
+        else {
+            gallery.classList.add("d-flex");
+            gallery.classList.remove("gallery-grid");
+            wrapper.classList.remove("grid-mode");
+            carouselBtn.classList.remove("btn-outline-info");
+            carouselBtn.classList.add("btn-info")
+            gridBtn.classList.remove("btn-info");
+            gridBtn.classList.add("btn-outline-info");
+        }
+    }
+
+    const imageModal = document.getElementById("imageModal");
+
+    imageModal.addEventListener("show.bs.modal", function(event) {
+        const clickedImage = event.relatedTarget;
+        const imageSource = clickedImage.getAttribute("src");
+        const modalImage = document.getElementById("modalImage");
+              modalImage.setAttribute("src", imageSource);
+    });
+  
+</script>
+</body>
+</html>
